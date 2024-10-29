@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentos - Galeria de Fotos IFPB</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-top: 85px;
+      }
+      .caption {
+        text-align: center;
+        color: #333;
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Documentos</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="diretores.html">Diretores</a></li>
+          <li><a href="coordenadores.html">Coordenadores</a></li>
+          <li><a href="professores.html">Docentes</a></li>
+          <li><a href="servidores.html">Servidores</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Galeria de Fotos - IFPB</h1>
+      <div class="gallery">
+        <img src="iniciodetudo.jpg" alt="Foto 1" data-caption="A imagem mostra o texto do projeto de lei Nº 3.305 de 1984, que foi apresentado na Câmara dos Deputados pelo deputado Edme Tavares. Esse projeto tinha como objetivo a criação de uma Escola Técnica Federal em Cajazeiras, Paraíba, com a intenção de promover a formação técnica e profissional na região, atendendo a demandas locais e regionais. O documento detalha a justificativa para a criação da escola, citando a importância de qualificar a mão de obra local e expandir as oportunidades de desenvolvimento econômico e social na cidade e região circundante. O projeto também menciona a estrutura e os cursos que a escola ofereceria, incluindo a formação em dois níveis de ensino: técnico e profissionalizante, voltados para atender ao setor produtivo e ao mercado de trabalho local." onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p2.jpg" alt="Foto 2" data-caption="A imagem apresenta detalhes do processo legislativo do Projeto de Lei Nº 3.305 de 1984, que resultou na criação da Escola Técnica Federal em Cajazeiras, Paraíba. O documento exibe etapas de votação, aprovações e pareceres das comissões de Constituição e Justiça, Finanças, e Educação e Cultura, que avaliaram e aprovaram a proposta. O processo incluiu discussões sobre a relevância da instituição, com pareceres favoráveis que ressaltaram a importância da escola para o desenvolvimento educacional e econômico da região. A sanção final do projeto pelo Presidente da República, José Sarney, oficializa a criação da escola, culminando no decreto que autoriza o funcionamento da Escola Técnica Federal de Cajazeiras. Essa escola veio a se tornar um marco na oferta de educação técnica para a população local e regiões vizinhas." onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p3.jpg" alt="Foto 3" data-caption="A imagem mostra um ofício emitido pela Prefeitura Municipal de Cajazeiras, datado de 13 de janeiro de 1987, direcionado ao diretor da Escola Técnica Federal da Paraíba, Prof. Espedito Freira. No documento, o prefeito Dr. Zé Antônio Leite Rolim reafirma o interesse da prefeitura em estabelecer a Escola Técnica no município. Para viabilizar a construção da instituição, a prefeitura doa uma área de 3,9 hectares e informa que a escritura de doação estará pronta até o final de janeiro de 1987. O prefeito explica que alguns atrasos ocorreram devido a dificuldades na negociação do terreno e ao recesso parlamentar. Além disso, a prefeitura está finalizando melhorias de infraestrutura, como a instalação de água e eletricidade, para garantir que o terreno esteja pronto para a construção." onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p4.jpg" alt="Foto 4" data-caption="A imagem mostra a Lei nº 837/87, da Prefeitura Municipal de Cajazeiras, no estado da Paraíba, sancionada em 19 de janeiro de 1987. A lei autoriza a doação de uma área de terra de 3,9 hectares para a Escola Técnica Federal da Paraíba, destinada à construção de um campus em Cajazeiras. O terreno, localizado no Sítio Serrote, é destinado exclusivamente para essa finalidade. A donatária tem um prazo de dois anos para iniciar o uso da área para a construção do campus, e caso o prazo não seja cumprido, o terreno será reincorporado ao município. A lei proíbe que o imóvel seja usado para fins comerciais, venda, ou hipoteca." onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p5,jpg" alt="Foto 5" data-caption="A imagem é um documento do *Cartório Dimas Andriola*, de Cajazeiras, Paraíba, intitulado 'Registro de Títulos e Documentos'. Trata-se do registro de uma escritura pública de doação inter vivos de uma gleba de terra localizada no Sítio Serrote, no município de Cajazeiras. A doação foi feita pela Prefeitura Municipal de Cajazeiras à Escola Técnica Federal da Paraíba. O documento foi registrado em 14 de maio de 1987, com assinatura do oficial substituto Francisco Ralfs Ricarte Moésia." onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p7.jpg" alt="Foto 6" data-caption="Autorização de funcionamento" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p8.jpg" alt="Foto 7" data-caption="Edital de concurso publico - Servidores" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p9.jpg" alt="Foto 8" data-caption="Edital de concurso publico - Servidores" onclick="openModal(this.src, this.dataset.caption)" />
+      </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div class="caption" id="captionText"></div>
+    </div>
+
+    <script>
+      function openModal(src, caption) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+        document.getElementById("captionText").innerText = caption;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2024 IFPB - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
