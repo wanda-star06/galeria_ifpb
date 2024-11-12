@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentos - Galeria de Fotos IFPB</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-top: 85px;
+      }
+      .caption {
+        text-align: center;
+        color: #333;
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Coordenadores</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="diretores.html">Diretores</a></li>
+          <li><a href="coordenadores.html">Coordenadores</a></li>
+          <li><a href="professores.html">Docentes</a></li>
+          <li><a href="servidores.html">Servidores</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Galeria de Fotos - IFPB</h1>
+      <div class="gallery">
+        <img src="edivaneide.jpg" alt="Antônia Edivaneide Gonzaga" data-caption=" Antônia Edivaneide Gonzaga
+        Coordenadora da Área de Formação Geral e projetos especiais" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p2.jpg" alt="Foto 2" data-caption="Foto 2" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p3.jpg" alt="Foto 3" data-caption="Foto 3" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="p4.jpg" alt="Foto 4" data-caption="Foto 4" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="https://via.placeholder.com/300" alt="Foto 5" data-caption="Foto de Exemplo 5" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="https://via.placeholder.com/300" alt="Foto 6" data-caption="Foto de Exemplo 6" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="https://via.placeholder.com/300" alt="Foto 7" data-caption="Foto de Exemplo 7" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="https://via.placeholder.com/300" alt="Foto 8" data-caption="Foto de Exemplo 8" onclick="openModal(this.src, this.dataset.caption)" />
+      </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div class="caption" id="captionText"></div>
+    </div>
+
+    <script>
+      function openModal(src, caption) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+        document.getElementById("captionText").innerText = caption;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2024 IFPB - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
