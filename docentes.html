@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docentes - Galeria de Fotos IFPB</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-top: 85px;
+      }
+      .caption {
+        text-align: center;
+        color: #333; 
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Docentes</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="documentos.html">Documentos</a></li>
+          <li><a href="diretores.html">Diretores</a></li>
+          <li><a href="coordenadores.html">Coordenadores</a></li>
+          <li><a href="professores.html">Docentes</a></li>
+          <li><a href="servidores.html">Servidores</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Galeria de Fotos - IFPB</h1>
+      <div class="gallery">
+        <img src="imagem1.jpg" alt="Foto 1" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="imagem2.jpg" alt="Foto 2" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="imagem3.jpg" alt="Foto 3" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="imagem4.jpg" alt="Foto 4" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
+      </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div class="caption" id="captionText"></div>
+    </div>
+
+    <script>
+      function openModal(src, caption) {
+        docentes.getElementById("modal").style.display = "block";
+        docentes.getElementById("modalImg").src = src;
+        docentes.getElementById("captionText").innerText = caption;
+      }
+
+      function closeModal() {
+        docentes.getElementById("modal").style.display = "none";
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2024 IFPB - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
