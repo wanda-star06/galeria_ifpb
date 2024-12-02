@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diretores - Galeria de Fotos IFPB</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        margin-top: 85px;
+      }
+      .caption {
+        text-align: center;
+        color: #333;
+        margin-top: 10px;
+        font-size: 1.1em;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+      .gallery img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .subtitulo {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Diretores</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/documentos.html">Documentos</a></li>
+          <li><a href="/diretores.html">Diretores</a></li>
+          <li><a href="/coordenadores.html">Coordenadores</a></li>
+          <li><a href="/professores.html">Docentes</a></li>
+          <li><a href="/servidores.html">Servidores</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Galeria de Fotos - IFPB</h1>
+
+      <!-- Primeiros Diretores -->
+      <div class="subtitulo">Primeiros Diretores</div>
+      <div class="gallery">
+        <img
+          src="foto1.jpg"
+          alt="Primeiro Diretor 1"
+          data-caption="Primeiro Diretor 1"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+        <img
+          src="foto2.jpg"
+          alt="Primeiro Diretor 2"
+          data-caption="Primeiro Diretor 2"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+        <img
+          src="foto3.jpg"
+          alt="Primeiro Diretor 3"
+          data-caption="Primeiro Diretor 3"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+      </div>
+
+      <!-- Atuais Diretores -->
+      <div class="subtitulo">Atuais Diretores</div>
+      <div class="gallery">
+        <img
+          src="foto4.jpg"
+          alt="Atual Diretor 1"
+          data-caption="Atual Diretor 1"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+        <img
+          src="foto5.jpg"
+          alt="Atual Diretor 2"
+          data-caption="Atual Diretor 2"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+        <img
+          src="foto6.jpg"
+          alt="Atual Diretor 3"
+          data-caption="Atual Diretor 3"
+          onclick="openModal(this.src, this.dataset.caption)"
+        />
+      </div>
+    </div>
+
+    <!-- Modal de Imagem -->
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div class="caption" id="captionText"></div>
+    </div>
+
+    <script>
+      function openModal(src, caption) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+        document.getElementById("captionText").innerText = caption;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2024 IFPB - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
