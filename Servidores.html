@@ -11,7 +11,7 @@
       }
       .caption {
         text-align: center;
-        color: #333;
+        color: rgb(255, 255, 255);
         margin-top: 10px;
         font-size: 1.1em;
       }
@@ -28,7 +28,7 @@
           <li><a href="documentos.html">Documentos</a></li>
           <li><a href="diretores.html">Diretores</a></li>
           <li><a href="coordenadores.html">Coordenadores</a></li>
-          <li><a href="professores.html">Docentes</a></li>
+          <li><a href="docentes.html">Docentes</a></li>
           <li><a href="servidores.html">Servidores</a></li>
         </ul>
       </nav>
@@ -38,25 +38,25 @@
       <h1>Galeria de Fotos - IFPB</h1>
       <div class="gallery">
         <img
-          src="Antigosservidores.jpg"
+          src="servidores/Antigosservidores.jpg"
           alt="Foto 1"
           data-caption="Antigos servidores do IFPB ,Campus Cajazeiras."
           onclick="openModal(this.src, this.dataset.caption)"
         />
         <img
-          src="Atuaisservidores.jpg"
+          src="servidores/Atuaisservidores.02.jpg"
           alt="Foto 2"
           data-caption="Atuais servidores do IFPB ,Campus Cajazeiras"
           onclick="openModal(this.src, this.dataset.caption)"
         />
         <img
-          src="Atuaisservidores.jpg"
+          src="servidores/Atuaisservidores.03.jpg"
           alt="Foto 3"
           data-caption="Atuais servidores do IFPB ,Campus Cajazeiras"
           onclick="openModal(this.src, this.dataset.caption)"
         />
         <img
-          src="Atuaisservidores.jpg"
+          src="servidores/Atuaisservidores.jpg"
           alt="Foto 4"
           data-caption="Atuais servidores do IFPB ,Campus Cajazeiras"
           onclick="openModal(this.src, this.dataset.caption)"
@@ -72,13 +72,13 @@
 
     <script>
       function openModal(src, caption) {
-        servidores.getElementById("modal").style.display = "block";
-        servidores.getElementById("modalImg").src = src;
-        servidores.getElementById("captionText").innerText = caption;
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+        document.getElementById("captionText").innerText = caption;
       }
 
       function closeModal() {
-        servidores.getElementById("modal").style.display = "none";
+        document.getElementById("modal").style.display = "none";
       }
     </script>
 

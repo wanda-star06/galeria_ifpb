@@ -11,7 +11,7 @@
       }
       .caption {
         text-align: center;
-        color: #333; 
+        color: rgb(255, 255, 255); 
         margin-top: 10px;
         font-size: 1.1em;
       }
@@ -28,7 +28,7 @@
           <li><a href="documentos.html">Documentos</a></li>
           <li><a href="diretores.html">Diretores</a></li>
           <li><a href="coordenadores.html">Coordenadores</a></li>
-          <li><a href="professores.html">Docentes</a></li>
+          <li><a href="docentes.html">Docentes</a></li>
           <li><a href="servidores.html">Servidores</a></li>
         </ul>
       </nav>
@@ -37,10 +37,26 @@
     <div class="container">
       <h1>Galeria de Fotos - IFPB</h1>
       <div class="gallery">
-        <img src="imagem1.jpg" alt="Foto 1" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
-        <img src="imagem2.jpg" alt="Foto 2" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
-        <img src="imagem3.jpg" alt="Foto 3" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
-        <img src="imagem4.jpg" alt="Foto 4" data-caption="Seleção de candidatos aos primeiros docentes" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem1.jpg" alt="Foto 1" data-caption="Antigos docentes da instituição" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem2.jpg" alt="Foto 2" data-caption="Antigos docentes da instituição" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem3.jpg" alt="Foto 3" data-caption="Antigos docentes da instituição" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem4.jpg" alt="Foto 4" data-caption="Antigos docentes da instituição" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem5.jpg" alt="Foto 5" data-caption="Sayonara Abrantes de Oliveira Uchoa, docente de Língua Portuguesa " onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem6.jpg" alt="Foto 6" data-caption="Stanley Borges de Oliveira, docente de Matemática" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem7.jpg" alt="Foto 7" data-caption="Geraldo Herbetet de Lacerda, docente de Matemática" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem8.jpg" alt="Foto 8" data-caption="João Paulo de Araújo Souza, docente de Matemática" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem9.jpg" alt="Foto 9" data-caption="Maria Elessandra Rodrigues Araújo, docente de Biologia" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem10.jpg" alt="Foto 10" data-caption="Tayla Fernanda Serantoni da Silveira, docente de Química" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem11.jpg" alt="Foto 11" data-caption="Leonardo Pereira da Silva, docente de Física" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem12.jpg" alt="Foto 12" data-caption="Hegildo Holanda Gonçalves, docente de Filosofia" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem13.jpg" alt="Foto 13" data-caption="Ildegarde Elouise Alves, docente de História" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem14.jpg" alt="Foto 14" data-caption="Maria Iris Abreu Santos, docente de Sociologia" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem15.jpg" alt="Foto 15" data-caption="Thais Norberta Bezerra de Moura, docente de Educação Física" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem16.jpg" alt="Foto 16" data-caption="Daniela Miguel de Souza Morais, docente de Língua Inglesa" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem17.jpg" alt="Foto 17" data-caption="Michel da Silva, docente de Desenvolvimento de aplicações móveis" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem18.jpg" alt="Foto 18" data-caption="Afonso Serafim Jacinto, docente de Redes de Computadores" onclick="openModal(this.src, this.dataset.caption)" />
+        <img src="docentes/imagem19.jpg" alt="Foto 19" data-caption="Antonio Ricart Jacinto de Oliveira Medeiros, docente de Informática aplicada a web e Desenvolvimento de Aplicações Web" onclick="openModal(this.src, this.dataset.caption)" />
+      </div>
       </div>
     </div>
 
@@ -52,13 +68,13 @@
 
     <script>
       function openModal(src, caption) {
-        docentes.getElementById("modal").style.display = "block";
-        docentes.getElementById("modalImg").src = src;
-        docentes.getElementById("captionText").innerText = caption;
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+        document.getElementById("captionText").innerText = caption;
       }
 
       function closeModal() {
-        docentes.getElementById("modal").style.display = "none";
+        document.getElementById("modal").style.display = "none";
       }
     </script>
 
